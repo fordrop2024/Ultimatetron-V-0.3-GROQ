@@ -1,0 +1,6 @@
+{
+  "name": "ULTIMATETRON",
+  "description": "Next-generation AI-powered YouTube content production command center.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --color-bg-base: #050507;
+    --color-surface-subtle: #0B0C11;
+    --color-crimson: #FF1738;
+    --color-crimson-energy: #FF3048;
+    --color-silver: #9298A5;
+    --color-text-primary: #F4F5FA;
+    --color-text-secondary: #A0A5B3;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-bg-base);
+    color: var(--color-text-primary);
+    overflow-x: hidden;
+  }
+
+  /* Custom subtle dark scrollbars */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #07080B;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1C202C;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #FF1738;
+  }
+}
+
+/* Subtle holographic energy line and scan effects */
+@keyframes energyPulse {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(1000%);
+  }
+}
+
+.animate-energy-pulse {
+  animation: energyPulse 4s ease-in-out infinite;
+}
+
+.animate-scanline {
+  animation: scanline 8s linear infinite;
+}
+
+.glow-crimson {
+  box-shadow: 0 0 24px -4px rgba(255, 23, 56, 0.35);
+}
+
+.glow-crimson-sm {
+  box-shadow: 0 0 12px -2px rgba(255, 23, 56, 0.25);
+}
+
+.border-crimson-glow {
+  border-color: rgba(255, 23, 56, 0.35);
+}
